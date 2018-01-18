@@ -5,14 +5,13 @@ import android.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Button;
 import android.widget.FrameLayout;
 
 import org.graphstream.graph.Edge;
 import org.graphstream.graph.Graph;
 import org.graphstream.graph.Node;
 import org.graphstream.graph.implementations.SingleGraph;
-import org.graphstream.ui.android.viewer.util.DefaultFragment;
+import org.graphstream.ui.android_viewer.util.DefaultFragment;
 
 public class Activity_withoutXML extends AppCompatActivity {
 

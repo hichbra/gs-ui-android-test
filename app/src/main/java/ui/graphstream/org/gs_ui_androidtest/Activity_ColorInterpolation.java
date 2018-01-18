@@ -1,23 +1,20 @@
 package ui.graphstream.org.gs_ui_androidtest;
 
+import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.FrameLayout;
 
-import org.graphstream.graph.Edge;
 import org.graphstream.graph.Graph;
 import org.graphstream.graph.Node;
 import org.graphstream.graph.implementations.MultiGraph;
-import org.graphstream.graph.implementations.SingleGraph;
-import org.graphstream.ui.android.viewer.util.DefaultFragment;
-import org.graphstream.ui.view.Viewer;
+import org.graphstream.ui.android_viewer.util.DefaultFragment;
 import org.graphstream.ui.view.ViewerListener;
 import org.graphstream.ui.view.ViewerPipe;
 
-public class Activity_ColorInterpolation extends AppCompatActivity implements ViewerListener {
+public class Activity_ColorInterpolation extends Activity implements ViewerListener {
 
     private static final int CONTENT_VIEW_ID = 10101010;
     private DefaultFragment fragment ;
