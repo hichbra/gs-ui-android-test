@@ -73,9 +73,8 @@ public class Activity_withXML extends Activity {
 
             if (null == fragment) {
                 // Créez le fragment
-                DefaultFragment.autoLayout = autoLayout ;
                 fragment = new DefaultFragment();
-                fragment.init(graph);
+                fragment.init(graph, autoLayout);
             }
             //Dans notre cas, l'activité a été démarrée avec des paramètres spécifiques contenus dans l'Intent. Passez ces paramètres à votre fragment
             //fragment.setArguments(getIntent().getExtras());

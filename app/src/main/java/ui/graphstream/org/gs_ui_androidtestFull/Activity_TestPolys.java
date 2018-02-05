@@ -79,9 +79,8 @@ public class Activity_TestPolys extends Activity {
             // find fragment or create him
             fragment = (DefaultFragment) fm.findFragmentByTag("fragment_tag");
             if (null == fragment) {
-                DefaultFragment.autoLayout = autoLayout ;
                 fragment = new DefaultFragment();
-                fragment.init(graph);
+                fragment.init(graph, autoLayout);
             }
 
             // Add the fragment in the layout and commit
