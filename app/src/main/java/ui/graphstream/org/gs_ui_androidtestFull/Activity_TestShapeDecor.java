@@ -285,6 +285,7 @@ public class Activity_TestShapeDecor extends Activity implements ViewerListener 
                     "}"+
                     "edge {" +
                     "	fill-color: #0004;" +
+                    "   text-size: 30px;"+
                     "   size: 5;"+
                     "}"+
                     "edge#au { text-alignment: center; }"+

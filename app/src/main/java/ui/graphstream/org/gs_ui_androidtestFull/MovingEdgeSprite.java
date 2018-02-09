@@ -1,5 +1,7 @@
 package ui.graphstream.org.gs_ui_androidtestFull;
 
+import android.util.Log;
+
 import org.graphstream.graph.Edge;
 import org.graphstream.graph.Node;
 import org.graphstream.ui.graphicGraph.stylesheet.StyleConstants.Units;
@@ -30,7 +32,7 @@ public class MovingEdgeSprite extends Sprite {
 				Edge other = randomOutEdge( node );
 
 				if(other==null) {
-				    System.err.println("node "+node.getId()+" out="+node.getOutDegree()+" null !!");
+				    Log.e("Error", "node "+node.getId()+" out="+node.getOutDegree()+" null !!");
 				}
 
 				if( node.getOutDegree() > 1 ) { 

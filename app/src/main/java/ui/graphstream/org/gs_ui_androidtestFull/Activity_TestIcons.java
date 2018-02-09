@@ -145,6 +145,7 @@ public class Activity_TestIcons extends Activity implements ViewerListener {
                     "padding: 15px, 10px;"+
                     "shadow-mode: none;"+
                     "icon-mode: at-left;"+
+                    "text-size: 30px;"+
                     "text-style: normal;"+
                     "text-font: 'Droid Sans';"+
                     "icon: dyn-icon;"+

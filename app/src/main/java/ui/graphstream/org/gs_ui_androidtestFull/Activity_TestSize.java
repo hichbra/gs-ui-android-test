@@ -136,6 +136,7 @@ public class Activity_TestSize extends Activity implements ViewerListener {
                     "	}"+
                     "node {"+
                     "	shape: circle;"+
+                    "	text-size: 30px;"+
                     "	size: 60px;"+
                     "	fill-mode: plain;"+
                     "	fill-color: #CCC;"+
@@ -158,10 +159,11 @@ public class Activity_TestSize extends Activity implements ViewerListener {
                     "node#D {"+
                     "	shape: box;"+
                     "	size-mode: fit;"+
-                    "	padding: 5px;"+
+                    "	padding: 20px;"+
                     "}"+
                     "edge {"+
                     "	shape: blob;"+
+                    "	text-size: 30px;"+
                     "	size: 3px;"+
                     "	fill-color: grey;"+
                     "	fill-mode: plain;"+

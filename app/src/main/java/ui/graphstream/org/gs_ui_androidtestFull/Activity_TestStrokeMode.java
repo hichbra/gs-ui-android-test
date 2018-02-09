@@ -68,22 +68,23 @@ public class Activity_TestStrokeMode extends Activity {
             "node {"+
                     "	fill-color: white;"+
                     "	fill-mode: plain;"+
-                    "	stroke-mode: dashes;"+
+                    "	stroke-mode: double;"+
                     "	stroke-width: 5px;"+
                     "	stroke-color: red;"+
                     "	size: 60px;"+
+                    "	text-size: 30px;"+
                     "}"+
                     "node#A {"+
                     "	shape: triangle;"+
-                    "	stroke-mode: plain;"+
+                    "	stroke-mode: double;"+
                     "}"+
                     "node#B {"+
                     "	shape: cross;"+
-                    "	stroke-mode: plain;"+
+                    "	stroke-mode: dashes;"+
                     "}"+
                     "node#C {"+
                     "	shape: diamond;"+
-                    "	stroke-mode: plain;"+
+                    "	stroke-mode: double;"+
                     "}"+
                     "node#D {"+
                     "	fill-color: gray; "+
@@ -94,7 +95,7 @@ public class Activity_TestStrokeMode extends Activity {
                     "	shape: line;"+
                     "	size: 5px;"+
                     "	stroke-mode: dashes;"+
-                    "	stroke-width: 8px;"+
+                    "	stroke-width: 5px;"+
                     "	stroke-color: red;"+
                     "	fill-color: red;"+
                     "}"+

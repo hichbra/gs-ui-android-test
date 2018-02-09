@@ -15,11 +15,10 @@ import org.graphstream.ui.spriteManager.Sprite;
 import org.graphstream.ui.spriteManager.SpriteManager;
 import org.graphstream.ui.view.ViewerListener;
 
-public class Activity_TestPies extends Activity implements ViewerListener {
+public class Activity_TestPies extends Activity {
 
     private static final int CONTENT_VIEW_ID = 10101010;
     private DefaultFragment fragment ;
-    protected boolean loop = true;
 
     private double[] values = new double[3];
     private Node A, B ;
@@ -43,8 +42,7 @@ public class Activity_TestPies extends Activity implements ViewerListener {
         sm = new SpriteManager(g);
         pie = sm.addSprite("pie");
 
-        pie.setAttribute("ui.style", "shape: pie-chart; fill-color: #F00, #0F0, #00F; size: 100px;");
-        g.setAttribute("ui.antialias");
+        pie.setAttribute("ui.style", "shape: pie-chart; fill-color: #F00, #0F0, #00F; size: 500px;");
 
         values[0] = 0.3333;
         values[1] = 0.3333;
@@ -52,6 +50,8 @@ public class Activity_TestPies extends Activity implements ViewerListener {
         pie.setAttribute("ui.pie-values", values);
         pie.attachToEdge("AB");
         pie.setPosition(0.5);
+
+        g.setAttribute("ui.antialias");
 
         display(savedInstanceState, g, true);
     }
@@ -70,7 +70,7 @@ public class Activity_TestPies extends Activity implements ViewerListener {
             values2[2] = 0.6;
             boolean on = true;
 
-            while( loop ) {
+            while( true ) {
                 sleep( 2000 );
 
                 if(on) {
@@ -78,14 +78,14 @@ public class Activity_TestPies extends Activity implements ViewerListener {
                     values[1] = 0.3;
                     values[2] = 0.6;
                     A.setAttribute("ui.pie-values", new double[]{1.0});
-                    A.setAttribute("ui.style", "shape:pie-chart; fill-color:red;");
+                    A.setAttribute("ui.style", "shape:pie-chart; fill-color:red;size: 80px;");
                 }
                 else {
                     values[0] = 0.3;
                     values[1] = 0.3;
                     values[2] = 0.3;
                     A.setAttribute("ui.pie-values", new double[]{1.0});
-                    A.setAttribute("ui.style", "shape:pie-chart; fill-color:blue;");
+                    A.setAttribute("ui.style", "shape:pie-chart; fill-color:blue;size: 80px;");
                 }
                 pie.setAttribute("ui.pie-values", values);
 
@@ -110,57 +110,6 @@ public class Activity_TestPies extends Activity implements ViewerListener {
             FragmentTransaction ft = fm.beginTransaction() ;
             ft.add(CONTENT_VIEW_ID, fragment).commit();
         }
-    }
-
-    private String styleSheet =
-            "graph {"+
-                    "fill-mode: plain;"+
-                    "fill-color: white, gray;"+
-                    "padding: 60px;"+
-                    "}"+
-                    "node {"+
-                    "shape: circle;"+
-                    "size: 100px;"+
-                    "fill-mode: plain;"+
-                    "fill-color: grey;"+
-                    "stroke-mode: none;"+
-                    "text-visibility-mode: zoom-range;"+
-                    "text-visibility: 0, 0.9;"+
-                    "}"+
-                    "edge {"+
-                    "size: 5px;"+
-                    "shape: line;"+
-                    "fill-color: grey;"+
-                    "fill-mode: plain;"+
-                    "stroke-mode: none;"+
-                    "}"+
-                    "sprite {"+
-                    "shape: circle;"+
-                    "size: 80px;"+
-                    "fill-mode: plain;"+
-                    "fill-color: red;"+
-                    "stroke-mode: none;"+
-                    "}";
-
-    public void buttonPushed( String id ) {
-        Log.e("Debug", id);
-        if( id.equals("quit") )
-            loop = false;
-        else if( id.equals("A") )
-            Log.e("Debug","Button A pushed" );
-    }
-
-    public void buttonReleased(String id) {
-    }
-
-    public void mouseOver(String id) {
-    }
-
-    public void mouseLeft(String id) {
-    }
-
-    public void viewClosed(String viewName) {
-        loop = false;
     }
 
     protected void sleep( long ms ) {

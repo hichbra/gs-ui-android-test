@@ -28,8 +28,6 @@ public class Activity_TestStars extends Activity implements ViewerListener {
     private Graph graph ;
     protected boolean loop = true;
 
-    public static final int URL_IMAGE = R.drawable.icon ;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -122,15 +120,15 @@ public class Activity_TestStars extends Activity implements ViewerListener {
     }
 
     private String styleSheet =
-            "graph {"+
+                    "graph {"+
                     "	canvas-color: black;"+
-                    "		fill-mode: gradient-vertical;"+
-                    "		fill-color: black, #004;"+
-                    "		padding: 60px;"+
-                    "	}"+
+                    "	fill-mode: gradient-vertical;"+
+                    "	fill-color: black, #004;"+
+                    "	padding: 60px;"+
+                    "}"+
                     "node {"+
                     "	shape: circle;"+
-                    "	size: 30px;"+
+                    "	size: 60px;"+
                     "	fill-mode: gradient-radial;"+
                     "	fill-color: #FFFA, #FFF0;"+
                     "	stroke-mode: none;"+
@@ -154,8 +152,9 @@ public class Activity_TestStars extends Activity implements ViewerListener {
                     "}"+
                     "sprite {"+
                     "	shape: circle;"+
+                    "   size: 170px;"+
                     "	fill-mode: gradient-radial;"+
-                    "	fill-color: #FFF8, #FFF0;"+
+                    "	fill-color: white, #FFF0;"+
                     "}";
 
     class MySpriteFactory extends SpriteFactory {

@@ -28,9 +28,7 @@ public class Activity_TestDynColor extends Activity {
 
         Graph g = new MultiGraph("Test Stroke");
         g.setAttribute("ui.antialias");
-        g.setAttribute("ui.stylesheet", styleSheet);
-
-        g.setAttribute("ui.stylesheet", "node { fill-mode: dyn-plain; stroke-mode: plain; stroke-width: 1px; } edge { fill-mode: dyn-plain; }");
+        g.setAttribute("ui.stylesheet", "node { fill-mode: dyn-plain; stroke-mode: plain; stroke-width: 3px; size: 60px;} edge { fill-mode: dyn-plain; size: 3px;}");
         g.addNode("A"); g.addNode("B"); g.addNode("C");
         g.addEdge("AB", "A", "B"); g.addEdge("BC", "B", "C"); g.addEdge("CA", "C", "A");
 
@@ -60,45 +58,4 @@ public class Activity_TestDynColor extends Activity {
             ft.add(CONTENT_VIEW_ID, fragment).commit();
         }
     }
-
-    private String styleSheet =
-            "node {"+
-                    "	fill-color: white;"+
-                    "	fill-mode: plain;"+
-                    "	stroke-mode: dashes;"+
-                    "	stroke-width: 1px;"+
-                    "	stroke-color: red;"+
-                    "	size: 20px;"+
-                    "}"+
-                    "node#A {"+
-                    "	shape: triangle;"+
-                    "	stroke-mode: plain;"+
-                    "}"+
-                    "node#B {"+
-                    "	shape: cross;"+
-                    "	stroke-mode: plain;"+
-                    "}"+
-                    "node#C {"+
-                    "	shape: diamond;"+
-                    "	stroke-mode: plain;"+
-                    "}"+
-                    "node#D {"+
-                    "	fill-color: gray; "+
-                    "	stroke-color: blue; "+
-                    "}"+
-                    "edge {"+
-                    //"	fill-mode: none;"+
-                    "	shape: line;"+
-                    "	size: 0px;"+
-                    "	stroke-mode: dashes;"+
-                    "	stroke-width: 1px;"+
-                    "	stroke-color: red;"+
-                    "	fill-color: red;"+
-                    "}"+
-                    "edge#BC {"+
-                    "	shape: blob; size: 3px; fill-color: #444;"+
-                    "}"+
-                    "edge#AD {"+
-                    "	stroke-mode: double;"+
-                    "}";
 }

@@ -135,7 +135,7 @@ public class Activity_EdgeSelection extends Activity implements ViewerListener {
     }
 
     protected static String styleSheet = "graph { padding: 20px; stroke-width: 0px; }"
-            + "node {size: 48, 48;}"
+            + "node {size: 48, 48;text-size: 20px;}"
             + "node:selected { fill-color: red;  fill-mode: plain; }"
             + "node:clicked  { fill-color: blue; fill-mode: plain; }"
             + "edge{ size: 5;}"

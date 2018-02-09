@@ -54,7 +54,6 @@ public class Activity_TestArrows extends Activity implements ViewerListener {
 
         graph.setAttribute( "ui.stylesheet", styleSheet );
         graph.setAttribute( "ui.antialias" );
-        graph.setAttribute( "ui.quality" );
 
         Node A = graph.addNode( "A" );
         Node B = graph.addNode( "B" );
@@ -135,13 +134,14 @@ public class Activity_TestArrows extends Activity implements ViewerListener {
             + "}"
             + ""
             + "node {"
-            + "shape: circle;"
+            + " shape: circle;"
             + " fill-mode: plain;"
             + " size: 60px;"
             + " fill-color: #CCCC;"
             + " stroke-mode: plain; "
             + " stroke-color: black; "
             + " stroke-width: 9px; "
+            + " text-size: 15px;"
             + "} "
             + ""
             + "node:clicked { "

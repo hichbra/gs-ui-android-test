@@ -141,6 +141,7 @@ public class Activity_TestFreePlane extends Activity implements ViewerListener {
             + "	padding: 5px, 1px;"
             + "	shadow-mode: none;"
             + "	icon-mode: at-left;"
+            + "	text-size: 25px;"
             + "	text-style: normal;"
             + "	text-font: 'Droid Sans';"
             + "	icon: url('"+URL_IMAGE+"');"

@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "ui.graphstream.org.gs_ui_androidtest"
-        minSdkVersion 24
+        minSdkVersion 26
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -32,7 +32,6 @@ dependencies {
     implementation files('libs/gs-core-2.0.0-SNAPSHOT-jar-with-dependencies.jar')
     implementation files('libs/gs-algo-2.0.0-SNAPSHOT-jar-with-dependencies.jar')
     //implementation files('libs/gs-algo2-0.jar')
-
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.android.support:design:26.1.0'

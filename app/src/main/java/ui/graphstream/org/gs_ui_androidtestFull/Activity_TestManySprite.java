@@ -114,7 +114,7 @@ public class Activity_TestManySprite extends Activity implements ViewerListener 
                     "}"+
                     "node {"+
                     "shape: circle;"+
-                    "size: 10px;"+
+                    "size: 40px;"+
                     "fill-mode: plain;"+
                     "fill-color: grey;"+
                     "stroke-mode: none;"+
@@ -122,7 +122,7 @@ public class Activity_TestManySprite extends Activity implements ViewerListener 
                     "text-visibility: 0, 0.9;"+
                     "}"+
                     "edge {"+
-                    "size: 1px;"+
+                    "size: 3px;"+
                     "shape: line;"+
                     "fill-color: grey;"+
                     "fill-mode: plain;"+
@@ -130,7 +130,7 @@ public class Activity_TestManySprite extends Activity implements ViewerListener 
                     "}"+
                     "sprite {"+
                     "shape: circle;"+
-                    "size: 6px;"+
+                    "size: 20px;"+
                     "fill-mode: plain;"+
                     "fill-color: red;"+
                     "stroke-mode: none;"+
