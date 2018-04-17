@@ -63,22 +63,15 @@ public class Activity_withXML extends Activity {
     }
 
     public void display(Bundle savedInstanceState, Graph graph, boolean autoLayout) {
-        //Cependant, si le fragment est restauré à partir d'un état précédent, alors il n'y a pas besoin d'effectuer quoi que ce soit et il faudrait juste
-        // effectuer le return, sinon nous pourrions nous retrouver avec des fragments qui se chevauchent.
         if (savedInstanceState == null) {
-            // Récupérez le FragmentManager
             FragmentManager fm = getFragmentManager();
-            // Trouver si le fragment que nous souhaitons afficher appartient à la backstack
             DefaultFragment fragment = (DefaultFragment) fm.findFragmentByTag("fragment_tag");
 
             if (null == fragment) {
-                // Créez le fragment
                 fragment = new DefaultFragment();
                 fragment.init(graph, autoLayout);
             }
-            //Dans notre cas, l'activité a été démarrée avec des paramètres spécifiques contenus dans l'Intent. Passez ces paramètres à votre fragment
-            //fragment.setArguments(getIntent().getExtras());
-            // Ajoutez le fragment à son layout et effectuez le commit
+
             FragmentTransaction ft = fm.beginTransaction() ;
             ft.add(R.id.layoutFragment, fragment).commit();
         }
