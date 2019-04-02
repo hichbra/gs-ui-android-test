@@ -1,8 +1,8 @@
 package ui.graphstream.org.gs_ui_androidtestFull;
 
-import android.app.Activity;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.FrameLayout;
@@ -20,7 +20,7 @@ import org.graphstream.ui.spriteManager.SpriteManager;
 import org.graphstream.ui.view.ViewerListener;
 import org.graphstream.ui.view.ViewerPipe;
 
-public class Activity_TestManySprite extends Activity implements ViewerListener {
+public class Activity_TestManySprite extends FragmentActivity implements ViewerListener {
 
     private static final int CONTENT_VIEW_ID = 10101010;
     private DefaultFragment fragment ;
@@ -91,7 +91,7 @@ public class Activity_TestManySprite extends Activity implements ViewerListener 
 
     public void display(Bundle savedInstanceState, Graph graph, boolean autoLayout) {
         if (savedInstanceState == null) {
-            FragmentManager fm = getFragmentManager();
+            FragmentManager fm = getSupportFragmentManager();
 
             // find fragment or create him
             fragment = (DefaultFragment) fm.findFragmentByTag("fragment_tag");

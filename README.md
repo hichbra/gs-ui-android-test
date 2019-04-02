@@ -33,8 +33,8 @@ then, add the `gs-core` and `gs-ui-android` to your dependencies:
 
 ```xml
 dependencies {
-    api 'com.github.graphstream:gs-ui-android:2.0-alpha'
-    api 'com.github.graphstream:gs-core:2.0-alpha'
+    api 'com.github.graphstream:gs-ui-android:dev-SNAPSHOT'
+    api 'com.github.graphstream:gs-core:dev-SNAPSHOT'
 }
 ```
 
@@ -47,7 +47,7 @@ For the convenience of the users, a default Android Fragment (`org.graphstream.u
 ```java
 public void display(Bundle savedInstanceState, Graph graph, boolean autoLayout) {
     if (savedInstanceState == null) {
-        FragmentManager fm = getFragmentManager();
+        FragmentManager fm = getSupportFragmentManager();
 
         // find fragment or create him
         fragment = (DefaultFragment) fm.findFragmentByTag("fragment_tag");
