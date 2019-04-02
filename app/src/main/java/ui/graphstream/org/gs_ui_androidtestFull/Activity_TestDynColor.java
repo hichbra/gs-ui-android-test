@@ -1,8 +1,8 @@
 package ui.graphstream.org.gs_ui_androidtestFull;
 
-import android.app.Activity;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.FrameLayout;
@@ -13,7 +13,7 @@ import org.graphstream.ui.android_viewer.util.DefaultFragment;
 
 import ui.graphstream.org.gs_ui_androidtest.R;
 
-public class Activity_TestDynColor extends Activity {
+public class Activity_TestDynColor extends FragmentActivity {
 
     private static final int CONTENT_VIEW_ID = 10101010;
     private DefaultFragment fragment ;
@@ -44,7 +44,7 @@ public class Activity_TestDynColor extends Activity {
 
     public void display(Bundle savedInstanceState, Graph graph, boolean autoLayout) {
         if (savedInstanceState == null) {
-            FragmentManager fm = getFragmentManager();
+            FragmentManager fm = getSupportFragmentManager();
 
             // find fragment or create him
             fragment = (DefaultFragment) fm.findFragmentByTag("fragment_tag");

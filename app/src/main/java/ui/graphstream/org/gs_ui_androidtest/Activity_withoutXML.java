@@ -1,7 +1,7 @@
 package ui.graphstream.org.gs_ui_androidtest;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -72,7 +72,7 @@ public class Activity_withoutXML extends AppCompatActivity {
 
     public void display(Bundle savedInstanceState, Graph graph, boolean autoLayout) {
          if (savedInstanceState == null) {
-            FragmentManager fm = getFragmentManager();
+            FragmentManager fm = getSupportFragmentManager();
             DefaultFragment fragment = (DefaultFragment) fm.findFragmentByTag("fragment_tag");
 
             if (null == fragment) {
