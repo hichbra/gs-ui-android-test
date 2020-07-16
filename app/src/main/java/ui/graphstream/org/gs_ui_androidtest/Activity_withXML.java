@@ -1,8 +1,8 @@
 package ui.graphstream.org.gs_ui_androidtest;
 
-import android.app.Activity;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -12,7 +12,7 @@ import org.graphstream.graph.Node;
 import org.graphstream.graph.implementations.SingleGraph;
 import org.graphstream.ui.android_viewer.util.DefaultFragment;
 
-public class Activity_withXML extends Activity {
+public class Activity_withXML extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +64,7 @@ public class Activity_withXML extends Activity {
 
     public void display(Bundle savedInstanceState, Graph graph, boolean autoLayout) {
         if (savedInstanceState == null) {
-            FragmentManager fm = getFragmentManager();
+            FragmentManager fm = getSupportFragmentManager();
             DefaultFragment fragment = (DefaultFragment) fm.findFragmentByTag("fragment_tag");
 
             if (null == fragment) {
